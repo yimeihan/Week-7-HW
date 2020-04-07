@@ -1,0 +1,69 @@
+1.
+Canvas was initially introduced by Apple for use in their Mac OS X WebKit component in 2004. WebKit powered applications like Dashboard widgets and the Safari Browser.
+
+2.
+The canvas tag/element is an HTML5 element which can be used to draw graphics using JavaScript.
+2D stands for two-dimensional.
+
+3.
+The canvas element is only a container for graphics. You must use JavaScript to draw the graphics.
+
+4.
+The only other attributes on can set on the canvas element are the width and height attributes.
+
+5.
+If ctx.fillRect (0,0,600,400) is set in main.js, for example, the the default canvas size of 300w x 150h would be rendered to the page.
+
+6.
+Nothing will render to the page.
+
+7.
+It will only render 300w x 150h.
+
+8.
+We first need to create a context. A context is an object whose methods provide the drawing interface.
+
+9.
+There are two main drawing styles: "2d" for two-dimensional graphics, and "webgl" for three-dimensional graphics through the OpenGL interface.
+
+10.
+Once we have retrieved the element with the id of "canvas", our canvas element, we can access the drawing context using the HTML5 canvas built-in .getContext() method.
+<canvas id="canvas"></canvas>
+
+11.
+rectangles and paths
+
+12.
+Boxes, polygons, and circles.
+All other shapes must be created by combining one or more paths. But there are a whole bunch of built-in canvas path drawing functions which help us create complex shapes.
+
+13.
+The first is fillRect().
+Parameters:x, y, width, height
+x: the x-axis coordinate of the upper-left corner of the rectangle (the x-axis coordinate starting point).
+y: the y-axis coordinate of the upper-left corner of the rectangle (the y-axis coordinate starting point).
+width: the rectangle's width. Positive values are to the right. Negative values are to the left.
+height: the rectangle's height. Positive values are down. Negative values are up.
+
+The second is strokeRect().
+Parameters:x, y, width, height
+x: the x-axis coordinate of the rectangle's starting point.
+y: the y-axis coordinate of the rectangle's starting point.
+width: The rectangle's width. Positive values are to the right, and negative values are to the left.
+height: the rectangle's height. Positive values are down, and negative values are up.
+
+The third is clearRect().
+Parameters:x, y, width, height
+x: the x-axis coordinate of the rectangle's starting point.
+y: the y-axis coordinate of the rectangle's starting point.
+width: the rectangle's width. Positive values are to the right. Negative values are to the left.
+height: the rectangle's height. Positive values are down. Negative values are up.
+
+14.
+a list of points connected by segments of lines that can be different shapes. They can be curved or not, and of different widths and colors.
+A path, or a subpath, can be closed.
+
+15.
+Draw a path.
+Use drawing commands to draw into the path.
+Once a path has been created, stroke() or fill() the path to render it.
